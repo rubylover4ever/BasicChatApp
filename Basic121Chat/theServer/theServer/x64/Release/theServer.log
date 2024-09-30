@@ -1,0 +1,19 @@
+﻿  main.cpp
+  server.cpp
+D:\DEV\Basic121Chat\theServer\server.cpp(122,3): error C3861: 'broadcastMessage': identifier not found
+D:\DEV\Basic121Chat\theServer\server.cpp(158,4): error C3861: 'broadcastMessage': identifier not found
+D:\DEV\Basic121Chat\theServer\server.cpp(179,2): error C3861: 'broadcastMessage': identifier not found
+D:\DEV\Basic121Chat\theServer\server.cpp(183,14): error C2039: 'broadcastMessage': is not a member of 'Server'
+      D:\DEV\Basic121Chat\theServer\server.h(19,7):
+      see declaration of 'Server'
+  
+D:\DEV\Basic121Chat\theServer\server.cpp(184,21): error C2065: 'clients': undeclared identifier
+D:\DEV\Basic121Chat\theServer\server.cpp(184,12): error C3531: 'client': a symbol whose type contains 'auto' must have an initializer
+D:\DEV\Basic121Chat\theServer\server.cpp(184,19): error C2143: syntax error: missing ';' before ':'
+D:\DEV\Basic121Chat\theServer\server.cpp(184,28): error C2143: syntax error: missing ';' before ')'
+D:\DEV\Basic121Chat\theServer\server.cpp(185,36): error C2065: 'clients_mutex': undeclared identifier
+D:\DEV\Basic121Chat\theServer\server.cpp(186,29): error C2065: 'clients_map': undeclared identifier
+D:\DEV\Basic121Chat\theServer\server.cpp(186,20): error C2530: 'client': references must be initialized
+D:\DEV\Basic121Chat\theServer\server.cpp(186,20): error C3531: 'client': a symbol whose type contains 'auto' must have an initializer
+D:\DEV\Basic121Chat\theServer\server.cpp(186,27): error C2143: syntax error: missing ';' before ':'
+D:\DEV\Basic121Chat\theServer\server.cpp(186,40): error C2143: syntax error: missing ';' before ')'

@@ -1,0 +1,85 @@
+#include "menu.h"
+int k = 0;
+
+void Menu::setSystemColor(){
+	system(s_color); 
+}
+
+void Menu::loadingScreen() {
+	int bar1 = 177, bar2 = 219;
+	std::cout << "\n\n\n\n\t\t\t\t\t\t  LOADING...";
+	std::cout << "\n\n\n\n\t\t\t\t\t";
+	for (int i = 0; i < 30; i++) {
+		std::cout << (char)bar1;
+	}
+	std::cout << "\r"; 
+	std::cout << "\t\t\t\t\t";
+	for (int i = 0; i < 30; i++) {
+		std::cout << (char)bar2;
+		Sleep(15);
+	}
+	std::cout << "\n\n\t\t\t\t\t" << (char)1;
+	system("Pause");
+	std::cout << std::endl;
+	system("cls");
+}
+
+void Menu::mainScreen() {
+	std::cout << "\n\n\t\t\t\t\t\t  MAIN MENU";
+	std::cout << "\n\n\n\n\t\t\t LOG IN[1]";
+	std::cout << "\n\n\n\n\t\t\t  CHAT [2]";
+	std::cout << "\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t  EXIT [0]";
+}
+
+void Menu::menuSwitch()
+{
+	//bool exit = false;
+	system("cls");
+	mainScreen();
+	
+	//	Make the function recursive so when you enter a magic key word or number you get sent
+	// back to the menuSwitch(main screen) and you can choose again what you want to do
+	int choose;
+	std::cin >> choose;
+	switch (choose) {
+	case 0:
+		system("cls");//exit the app
+		std::cout << "\n\n\n\n\n\t\t\t\t\t\t Goodbye. =)";
+		
+		break;
+	case 1:
+		system("cls");
+		std::cout << "\n\n\n\n\n\t\t\t\t Username: ";
+		getName();
+		menuSwitch();
+		break;
+	case 2:
+		int return_value;
+		system("cls");
+		if(k == 0){
+			++k;
+			//std::cout << "this is the start() if k = 0, k = " << k << std::endl;
+			//Sleep(1000);
+			return_value = start();
+		}
+		else {
+			return_value = chat();
+		}
+
+		if(return_value == 1){
+			++k;
+			menuSwitch(); 
+		}
+		break;
+	case 3:
+		system("cls");
+		std::cout << "action 3";//see online friends 
+		break;
+	default:
+		system("cls");
+		std::cout << "\n\n\n\t\t\t\t\tInvalid action, please try again.";
+		Sleep(1000);
+		menuSwitch();
+	}
+}
+
