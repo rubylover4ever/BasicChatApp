@@ -1,3 +1,2 @@
 # BasicChatApp
-
-#urmeaza
+  BasicChatApp este o aplicație simplă de chat, dezvoltată pentru a facilita comunicarea între utilizatori. Proiectul include un meniu de navigare și funcționalități de bază, precum înregistrarea și logarea utilizatorilor. După autentificare, utilizatorii pot participa la sesiuni de chat în timp real. Aplicația este construită cu un server care gestionează multiple conexiuni client, permițând comunicarea într-un mod eficient și scalabil.
