@@ -41,7 +41,6 @@ public:
 	SOCKET getSocket();
 	
 private:
-
 	WSADATA wsaData;
 	SOCKET ListenSocket;
 	SOCKET ClientSocket;

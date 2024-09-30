@@ -1,4 +1,5 @@
-﻿  menu.cpp
+﻿  main.cpp
+  menu.cpp
   server.cpp
   Generating Code...
   theServer.vcxproj -> D:\DEV\Basic121Chat\theServer\x64\Debug\theServer.exe

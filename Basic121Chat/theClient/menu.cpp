@@ -43,8 +43,7 @@ void Menu::menuSwitch()
 	switch (choose) {
 	case 0:
 		system("cls");//exit the app
-		std::cout << "\n\n\n\n\n\t\t\t\t\t\t Goodbye. =)";
-		
+		std::cout << "\n\n\n\n\n\t\t\t\t\t\t Goodbye. =)\n\n\n\n\n\t\t\t\t\t\t";
 		break;
 	case 1:
 		system("cls");

@@ -17,11 +17,17 @@ public:
 	Client();
 	~Client();
 
+	//Main Function
 	int start();
+
+	//Messaging Functions
 	void sendMessage(const std::string& messag, SOCKET ConnectSocket);
 	void receiveMessages();
-	void getName();
 	int chat();
+
+	//Getter Functions
+	void getName();
+	
 private:
 	WSADATA wsaData;
 	SOCKET ConnectSocket;

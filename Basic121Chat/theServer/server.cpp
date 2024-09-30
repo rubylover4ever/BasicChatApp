@@ -59,9 +59,9 @@ int Server::start() {
 		exit(1);
 	}
 
-	//std::cout << "Wait for user/s to connect\n";
-	
+	std::cout << "Wait for user/s to connect\n";
 	ClientSocket = accept(ListenSocket, NULL, NULL);
+	std::cout << "waiting for connection\n";
 	if (ClientSocket == INVALID_SOCKET) {
 		std::cerr << "accept failed: " << WSAGetLastError() << std::endl;
 		closesocket(ListenSocket);
@@ -93,8 +93,6 @@ int Server::start() {
 	}
 }
 
-
-	
 
 //Messaging Functions
 void Server::sendMessage(const std::string& message, SOCKET ClientSocket)

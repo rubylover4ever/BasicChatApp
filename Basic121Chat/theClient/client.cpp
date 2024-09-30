@@ -15,6 +15,7 @@ Client::~Client() {
 	WSACleanup();
 }
 
+//Main Function
 int Client::start() {
 	struct addrinfo* result = NULL, hints;
 
@@ -55,9 +56,6 @@ int Client::start() {
 
 	std::cout << "Connected to the server. " << std::endl;
 
-	/*std::cout << "please enter your username: ";
-	std::getline(std::cin, username);*/
-
 	//start a thread to receive messages
 	std::thread(&Client::receiveMessages, this).detach();
 
@@ -80,6 +78,7 @@ int Client::start() {
 	}
 }
 
+//Messaging Functions
 void Client::sendMessage(const std::string& message, SOCKET ConnectSocket) {
 	int iResult = send(ConnectSocket, message.c_str(), (int)message.size(), 0);
 	if (iResult == SOCKET_ERROR) {
@@ -132,6 +131,7 @@ int Client::chat() {
 	}
 }
 
+//Getter Functions
 void Client::getName() {
 	std::cin>> username;
 }
